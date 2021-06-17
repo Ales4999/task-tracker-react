@@ -2,12 +2,17 @@ import PropTypes from 'prop-types'
 import Button from './Button'
 
 const Header = ({ title }) => {
+    const onClick = () => {
+        console.log('Click')
+    }
     return (
-        {/*Use className to define what style on your
-        index.css page should a component have */},
         <header className='header'>
            <h1 /*style= {headerStyle}*/ >{ title }</h1> 
-            <Button text='Add' color='green' /> 
+            <Button 
+                text='Add' 
+                color='green' 
+                onClick={onClick}
+            /> 
         </header>
     )
 }
@@ -27,5 +32,8 @@ Header.protoTypes = {
 //     padding: "10px",
 //     fontFamily: "Arial"
 // }
+
+/*Use className to define what style on your
+index.css page should a component have */
 
 export default Header
